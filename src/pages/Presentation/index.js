@@ -11,17 +11,17 @@ import MKSocialButton from "components/MKSocialButton";
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import DefaultFooter from "examples/Footers/DefaultFooter";
-import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
+// import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
-import Counters from "pages/Presentation/sections/Counters";
+// import Counters from "pages/Presentation/sections/Counters";
 import Information from "pages/Presentation/sections/Information";
-import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
-import Pages from "pages/Presentation/sections/Pages";
+// import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
+// import Pages from "pages/Presentation/sections/Pages";
 import Testimonials from "pages/Presentation/sections/Testimonials";
-import Download from "pages/Presentation/sections/Download";
+// import Download from "pages/Presentation/sections/Download";
 
-import Team from "pages/LandingPages/AboutUs/sections/Team";
+// import Team from "pages/LandingPages/AboutUs/sections/Team";
 import Author from "pages/LandingPages/Author/sections/Profile";
 import AuthorContact from "pages/LandingPages/Author/sections/Contact";
 
