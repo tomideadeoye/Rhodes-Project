@@ -10,7 +10,6 @@ import MKSocialButton from "components/MKSocialButton";
 
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
 // import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
@@ -28,14 +27,13 @@ import AuthorContact from "pages/LandingPages/Author/sections/Contact";
 // Presentation page components
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
-// Routes
 import routes from "routes";
-import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/notes.png";
-import rhodetailslogo from "assets/images/rhodetailslogo.png";
 import styled from "styled-components";
+import { Box } from "@mui/material";
+import Footer from "./sections/Footer";
 
 const BlackBox = styled(MKBox)`
   background-image: linear-gradient(black, black), url(${bgImage});
@@ -50,7 +48,7 @@ function Presentation() {
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
+          route: "https://rhodetails.com/",
           label: "Newletter",
           color: "info",
         }}
@@ -70,7 +68,15 @@ function Presentation() {
       >
         <Container>
           <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
-            <img src={rhodetailslogo} alt="logo" width="40px" />
+            <Box
+              src="/images/rhodetailslogo.png"
+              alt="logo"
+              width="40px"
+              sx={{
+                filter:
+                  "filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(199deg) brightness(102%) contrast(103%);",
+              }}
+            />
             <MKTypography
               variant="h1"
               color="white"
@@ -110,11 +116,12 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <Information />{" "}
-        <Container sx={{ mt: 6 }}>
+        <Information />
+        <Container>
           <BuiltByDevelopers />
         </Container>
-        <Author /> <Testimonials />
+        <Author />
+        <Testimonials />
         <AuthorContact />
         {/* <Download /> <DesignBlocks /> <Pages /> <Counters />    <Team /> */}
         {/* <Container>
@@ -192,7 +199,7 @@ function Presentation() {
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://rhodetails.com/"
                   target="_blank"
                   color="facebook"
                   sx={{ mr: 1 }}
@@ -202,7 +209,7 @@ function Presentation() {
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://www.pinterest.com/pin/create/button/?url=https://rhodetails.com/"
                   target="_blank"
                   color="pinterest"
                 >
@@ -215,7 +222,7 @@ function Presentation() {
         </MKBox>
       </Card>
       <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
+        <Footer />
       </MKBox>
     </>
   );

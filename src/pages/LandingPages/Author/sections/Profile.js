@@ -2,15 +2,17 @@
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKAvatar from "components/MKAvatar";
-import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
 
 // Images
 import profilePicture from "assets/images/tobi.jpg";
+import { Box } from "@mui/material";
 
 function Profile() {
   return (
@@ -23,10 +25,43 @@ function Profile() {
           <Grid container justifyContent="center" py={6}>
             <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <MKTypography variant="h3">Tobi Adeoye</MKTypography>
-                <MKButton variant="outlined" color="info" size="small">
-                  Follow
-                </MKButton>
+                <Box>
+                  <MKTypography variant="h2">Tobi Adeoye </MKTypography>
+                  <MKTypography
+                    variant="h4"
+                    color="text"
+                    sx={{
+                      margin: "0.5rem 0",
+                    }}
+                  >
+                    Media/Content Strategist
+                  </MKTypography>
+                </Box>
+
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    "& > *": {
+                      marginRight: "1rem",
+                    },
+                  }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/tobi-adeoye-03808181/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LinkedInIcon fontSize="medium" color="info" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/tobi-adeoye-03808181/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <TwitterIcon fontSize="medium" color="info" />
+                  </a>
+                </Box>
               </MKBox>
               <Grid container spacing={3} mb={3}>
                 <Grid item>
@@ -54,39 +89,43 @@ function Profile() {
                   </MKTypography>
                 </Grid>
               </Grid>
-              <MKTypography variant="body1" fontWeight="light" color="text">
-                Decisions: If you can&apos;t decide, the answer is no. If two equally difficult
-                paths, choose the one more painful in the short term (pain avoidance is creating an
-                illusion of equality). Choose the path that leaves you more equanimous. <br />{" "}
-                <br />
-                tobiadeoye@rhodetails.com
-                <br />
-                +2348139207076 <br /> @rhodetails
-                <MKTypography
-                  component="a"
-                  href="#"
-                  variant="body1"
-                  fontWeight="light"
-                  color="info"
-                  mt={3}
-                  sx={{
-                    width: "max-content",
-                    display: "flex",
-                    alignItems: "center",
 
-                    "& .material-icons-round": {
-                      transform: `translateX(3px)`,
-                      transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
-                    },
+              <Box>
+                <MKTypography variant="body1" fontWeight="light" color="text">
+                  I am a seasoned media-savvy storyteller and content strategist with years of
+                  experience in drawing up strategies to communicate the essence of brands to their
+                  target audience. I use media as a tool to help brands reach their goals.
+                  <br /> <br />
+                  tobbyrhodes@gmail .com
+                  <br />
+                  +2348139207076 <br />
+                  <MKTypography
+                    component="a"
+                    href="#"
+                    variant="body1"
+                    fontWeight="light"
+                    color="info"
+                    mt={3}
+                    sx={{
+                      width: "max-content",
+                      display: "flex",
+                      alignItems: "center",
 
-                    "&:hover .material-icons-round, &:focus .material-icons-round": {
-                      transform: `translateX(6px)`,
-                    },
-                  }}
-                >
-                  More about me <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+                      "& .material-icons-round": {
+                        transform: `translateX(3px)`,
+                        transition: "transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1.3)",
+                      },
+
+                      "&:hover .material-icons-round, &:focus .material-icons-round": {
+                        transform: `translateX(6px)`,
+                      },
+                    }}
+                  >
+                    Visit my blog{" "}
+                    <Icon sx={{ fontWeight: "bold", marginRight: "1rem" }}>arrow_forward</Icon>
+                  </MKTypography>
                 </MKTypography>
-              </MKTypography>
+              </Box>
             </Grid>
           </Grid>
         </Grid>

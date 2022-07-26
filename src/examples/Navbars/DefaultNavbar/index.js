@@ -1,26 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-param-reassign */
-/**
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 import { Fragment, useState, useEffect } from "react";
 
 // react-router components
 import { Link } from "react-router-dom";
-
-// prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
 
 // @mui material components
 import Container from "@mui/material/Container";
@@ -561,34 +545,34 @@ DefaultNavbar.defaultProps = {
 };
 
 // Typechecking props for the DefaultNavbar
-DefaultNavbar.propTypes = {
-  brand: PropTypes.string,
-  routes: PropTypes.arrayOf(PropTypes.object).isRequired,
-  transparent: PropTypes.bool,
-  light: PropTypes.bool,
-  action: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.shape({
-      type: PropTypes.oneOf(["external", "internal"]).isRequired,
-      route: PropTypes.string.isRequired,
-      color: PropTypes.oneOf([
-        "primary",
-        "secondary",
-        "info",
-        "success",
-        "warning",
-        "error",
-        "dark",
-        "light",
-        "default",
-        "white",
-      ]),
-      label: PropTypes.string.isRequired,
-    }),
-  ]),
-  sticky: PropTypes.bool,
-  relative: PropTypes.bool,
-  center: PropTypes.bool,
-};
+// DefaultNavbar.propTypes = {
+//   brand: PropTypes.string,
+//   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
+//   transparent: PropTypes.bool,
+//   light: PropTypes.bool,
+//   action: PropTypes.oneOfType([
+//     PropTypes.bool,
+//     PropTypes.shape({
+//       type: PropTypes.oneOf(["external", "internal"]).isRequired,
+//       route: PropTypes.string.isRequired,
+//       color: PropTypes.oneOf([
+//         "primary",
+//         "secondary",
+//         "info",
+//         "success",
+//         "warning",
+//         "error",
+//         "dark",
+//         "light",
+//         "default",
+//         "white",
+//       ]),
+//       label: PropTypes.string.isRequired,
+//     }),
+//   ]),
+//   sticky: PropTypes.bool,
+//   relative: PropTypes.bool,
+//   center: PropTypes.bool,
+// };
 
 export default DefaultNavbar;

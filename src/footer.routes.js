@@ -7,15 +7,12 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 // Material Kit 2 React components
 import MKTypography from "components/MKTypography";
 
-// Images
-import rhodetailslogo from "assets/images/rhodetailslogo.png";
-
 const date = new Date().getFullYear();
 
 export default {
   brand: {
     name: "Rhodetails",
-    image: rhodetailslogo,
+    image: "/images/rhodetailslogo.png",
     route: "/",
   },
   socials: [

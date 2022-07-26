@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -9,17 +10,14 @@ import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React examples
 import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
+import { Chip, Stack } from "@mui/material";
 
-// Images
-import appleLogo from "assets/images/logos/gray-logos/logo-apple.svg";
-import facebookLogo from "assets/images/logos/gray-logos/logo-facebook.svg";
-import nasaLogo from "assets/images/logos/gray-logos/logo-nasa.svg";
-import vodafoneLogo from "assets/images/logos/gray-logos/logo-vodafone.svg";
-import digitalOceanLogo from "assets/images/logos/gray-logos/logo-digitalocean.svg";
+const skills = ["Presentation", " Content Strategy ", "Content Creation", "Public Speaking"];
+const interests = ["Conversations", "Social Media", "Networking", "Touring"];
 
 function Information() {
   return (
-    <MKBox component="section" py={12}>
+    <MKBox component="section" py={12} mt="-10rem">
       <Container>
         <Grid
           container
@@ -29,64 +27,60 @@ function Information() {
           justifyContent="center"
           sx={{ mx: "auto", textAlign: "center" }}
         >
-          <MKTypography variant="h2">Brands That Trust Us</MKTypography>
-          {/* <MKTypography variant="h2" color="info" textGradient mb={2}>1,679,477+ web developers </MKTypography> */}
-          <MKTypography variant="body1" color="text" mb={2}>
-            We are trusted by brands in diverse sectors: startups, universities, governmental bodies
-            and more.
-          </MKTypography>
+          <MKTypography variant="h2">Experience</MKTypography>
         </Grid>
-        <Grid container spacing={3} sx={{ mt: 8 }}>
+        <Grid container spacing={3} sx={{ mt: 4 }}>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
-              name="Mofesola"
-              date="1 day ago"
-              review="This is an excellent product, the documentation is excellent and helped me get things done more efficiently."
-              rating={5}
+              color="info"
+              name="CREATIVE DIRECTOR  |   RHODETAILS"
+              review="Leveraging all forms of media to tell stories that connect with organizations' target audience."
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
               color="info"
-              name="Tomide"
-              date="1 week ago"
-              review="I found solution to all my design needs from Creative Tim. I use them as a freelancer in my hobby projects for fun! And its really affordable, very humble guys !!!"
-              rating={5}
+              name="CONTENT STRATEGIST  |   FLERI HEALTH"
+              review="Drawing up strategies to tell the Fleri-Partnerships stories in a way that connects with the target audience."
             />
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <DefaultReviewCard
-              name="Samuel Kamuli"
-              date="3 weeks ago"
-              review="Great product. Helped me cut the time to set up a site. I used the components within instead of starting from scratch. I highly recommend for developers who want to spend more time on the backend!."
-              rating={5}
+              color="info"
+              name="TWITTER SPACE HOST  |   DEEP DIVE CONVERSATION"
+              review="Hosting in-depth conversations with the brightest minds across disciplines to inspire Africans in navigating their career and personal challenges."
             />
           </Grid>
         </Grid>
+        <Grid
+          container
+          item
+          xs={12}
+          lg={6}
+          justifyContent="center"
+          sx={{ mx: "auto", textAlign: "center" }}
+        >
+          <MKTypography mt={7} mb={5} variant="h3">
+            Skills & Interests
+          </MKTypography>
+        </Grid>
+        <Stack
+          direction="row"
+          spacing={1}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {skills.map((skill, index) => (
+            <Chip key={index} label={skill} variant="outlined" />
+          ))}
+          {interests.map((skill, index) => (
+            <Chip key={index} label={skill} color="info" />
+          ))}
+        </Stack>
         <Divider sx={{ my: 6 }} />
-        <Grid container spacing={3} justifyContent="center">
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={appleLogo} alt="Apple" width="100%" opacity={0.6} />
-          </Grid>
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={facebookLogo} alt="Facebook" width="100%" opacity={0.6} />
-          </Grid>
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={nasaLogo} alt="Nasa" width="100%" opacity={0.6} />
-          </Grid>
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox component="img" src={vodafoneLogo} alt="Vodafone" width="100%" opacity={0.6} />
-          </Grid>
-          <Grid item xs={6} md={4} lg={2}>
-            <MKBox
-              component="img"
-              src={digitalOceanLogo}
-              alt="DigitalOcean"
-              width="100%"
-              opacity={0.6}
-            />
-          </Grid>
-        </Grid>
       </Container>
     </MKBox>
   );
