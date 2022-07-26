@@ -2,44 +2,31 @@
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
-
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKSocialButton from "components/MKSocialButton";
-
-// Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 // import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
-
-// Presentation page sections
-// import Counters from "pages/Presentation/sections/Counters";
 import Information from "pages/Presentation/sections/Information";
 // import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
 // import Pages from "pages/Presentation/sections/Pages";
 import Testimonials from "pages/Presentation/sections/Testimonials";
 // import Download from "pages/Presentation/sections/Download";
-
-// import Team from "pages/LandingPages/AboutUs/sections/Team";
 import Author from "pages/LandingPages/Author/sections/Profile";
 import AuthorContact from "pages/LandingPages/Author/sections/Contact";
-
-// Presentation page components
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
-
 import routes from "routes";
-
-// Images
 import bgImage from "assets/images/notes.png";
-import styled from "styled-components";
-import { Box } from "@mui/material";
-import Footer from "./sections/Footer";
+import Hero from "./components/Hero";
+import Footer from "./Footer";
 
-const BlackBox = styled(MKBox)`
-  background-image: linear-gradient(black, black), url(${bgImage});
-  background-size: cover;
-  background-blend-mode: saturation;
-`;
+const data = {
+  name: "Tobi Adeoye",
+  tag: "Building a strong connection with your customers through storytelling.",
+  coverImage: bgImage,
+  email: "tobiadeoye@gmail.com",
+  phone: "0803-890-890",
+};
 
 function Presentation() {
   return (
@@ -54,56 +41,7 @@ function Presentation() {
         }}
         sticky
       />
-
-      <BlackBox
-        minHeight="75vh"
-        width="100%"
-        sx={{
-          // backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "top",
-          display: "grid",
-          placeItems: "center",
-        }}
-      >
-        <Container>
-          <Grid container item xs={12} lg={7} justifyContent="center" mx="auto">
-            <Box
-              src="/images/rhodetailslogo.png"
-              alt="logo"
-              width="40px"
-              sx={{
-                filter:
-                  "filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(199deg) brightness(102%) contrast(103%);",
-              }}
-            />
-            <MKTypography
-              variant="h1"
-              color="white"
-              mt={-6}
-              mb={1}
-              style={{ fontSize: 100 }}
-              sx={({ breakpoints, typography: { size } }) => ({
-                [breakpoints.down("md")]: {
-                  fontSize: size["3xl"],
-                },
-              })}
-            >
-              Rhodetails
-            </MKTypography>
-            <MKTypography
-              variant="body1"
-              color="white"
-              style={{ fontSize: 30 }}
-              textAlign="center"
-              px={{ xs: 6, lg: 12 }}
-              mt={1}
-            >
-              Building a strong connection with your customers through storytelling.
-            </MKTypography>
-          </Grid>
-        </Container>
-      </BlackBox>
+      <Hero data={data} />
 
       <Card
         sx={{
@@ -135,7 +73,7 @@ function Presentation() {
                 description="Check the possible ways of working with our product and the necessary files for building your own project."
                 action={{
                   type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+                  route: "https://rhodetails.com/",
                   label: "Let's start",
                 }}
               />
@@ -221,7 +159,7 @@ function Presentation() {
           </Container>
         </MKBox>
       </Card>
-      <MKBox pt={6} px={1} mt={6}>
+      <MKBox pt={6} px={1} mt={9}>
         <Footer />
       </MKBox>
     </>

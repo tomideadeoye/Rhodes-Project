@@ -10,7 +10,7 @@ import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React examples
 import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
-import { Chip, Stack } from "@mui/material";
+import { Box, Chip } from "@mui/material";
 
 const skills = ["Presentation", " Content Strategy ", "Content Creation", "Public Speaking"];
 const interests = ["Conversations", "Social Media", "Networking", "Touring"];
@@ -64,13 +64,13 @@ function Information() {
             Skills & Interests
           </MKTypography>
         </Grid>
-        <Stack
-          direction="row"
-          spacing={1}
+        <Box
           sx={{
             display: "flex",
+            flexWrap: "wrap",
             justifyContent: "center",
             alignItems: "center",
+            marginBottom: "1rem",
           }}
         >
           {skills.map((skill, index) => (
@@ -79,7 +79,7 @@ function Information() {
           {interests.map((skill, index) => (
             <Chip key={index} label={skill} color="info" />
           ))}
-        </Stack>
+        </Box>
         <Divider sx={{ my: 6 }} />
       </Container>
     </MKBox>

@@ -13,8 +13,6 @@ import InterestsOutlinedIcon from "@mui/icons-material/InterestsOutlined";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
-
-// Material Kit 2 React examples
 import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
@@ -23,8 +21,26 @@ import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 // Images
 import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme) => ({
+  serviceList: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    [theme.breakpoints.down("lg")]: {
+      width: "100%",
+      margin: "2rem 0 0 2rem",
+      padding: "1rem 0.5rem 0.5rem 0",
+      fontSize: "2.3vw",
+      "& li": { fontSize: "2vw" },
+    },
+  },
+}));
 
 function Information() {
+  const classes = useStyles();
   return (
     <MKBox component="section" py={6} my={6}>
       <Container>
@@ -57,12 +73,12 @@ function Information() {
               />
             </RotatingCard>
           </Grid>
-          <Grid item xs={12} lg={7} sx={{ ml: "auto" }}>
+          <Grid item xs={12} lg={6} className={classes.serviceList}>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={6}>
                 <DefaultInfoCard
-                  icon={<NotesOutlinedIcon fontSize="large" />}
-                  title="Writing..."
+                  icon={<NotesOutlinedIcon fontSize="small" />}
+                  title="Writing"
                   description={
                     <ul>
                       <li>Newsletters</li>
@@ -77,10 +93,10 @@ function Information() {
                 />
               </Grid>
 
-              <Grid item xs={12} md={6}>
+              <Grid item xs={6}>
                 <DefaultInfoCard
-                  icon={<VideoCameraFrontOutlinedIcon fontSize="large" />}
-                  title="Videos creation..."
+                  icon={<VideoCameraFrontOutlinedIcon fontSize="small" />}
+                  title="Videos creation"
                   description={
                     <ul>
                       <li>Documentaries</li>
@@ -88,7 +104,7 @@ function Information() {
                       <li>Youtube episodes</li>
                       <li>Reality show</li>
                       <li> Podcast</li>
-                      <li>Recordings/cuts</li>
+                      <li>Recordings</li>
                       <li>Video edits</li>
                     </ul>
                   }
@@ -97,10 +113,10 @@ function Information() {
             </Grid>
 
             <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={6}>
                 <DefaultInfoCard
-                  icon={<PartyModeOutlinedIcon fontSize="large" />}
-                  title="Visual Creation..."
+                  icon={<PartyModeOutlinedIcon fontSize="small" />}
+                  title="Visual Creation"
                   description={
                     <ul>
                       <li>Photobooks</li>
@@ -110,10 +126,10 @@ function Information() {
                   }
                 />
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={6}>
                 <DefaultInfoCard
-                  icon={<MicExternalOnOutlinedIcon fontSize="large" />}
-                  title="Audio creation..."
+                  icon={<MicExternalOnOutlinedIcon fontSize="small" />}
+                  title="Audio creation"
                   description={
                     <ul>
                       <li>Voiceovers</li>
@@ -123,10 +139,10 @@ function Information() {
                   }
                 />
               </Grid>
-              <Grid item xs={12} md={6} style={{ marginTop: 40 }}>
+              <Grid item xs={6}>
                 <DefaultInfoCard
-                  icon={<InterestsOutlinedIcon fontSize="large" />}
-                  title="Social Media..."
+                  icon={<InterestsOutlinedIcon fontSize="small" />}
+                  title="Social Media"
                   description={
                     <ul>
                       <li>Flyers</li>

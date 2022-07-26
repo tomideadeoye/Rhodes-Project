@@ -1,14 +1,33 @@
 // @mui material components
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
-
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
 import bgImage from "assets/images/value.jpg";
+import Box from "@mui/material/Box";
+import { makeStyles } from "@mui/styles";
+
+const useStyles = makeStyles((theme) => ({
+  proposition: {
+    paddingBottom: "2rem",
+    color: "white",
+
+    "& h1": {
+      fontSize: "3.5vw",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "5vw",
+      },
+    },
+
+    "& p": {
+      color: "white",
+      [theme.breakpoints.down("sm")]: {
+        fontSize: "0.7rem",
+      },
+    },
+  },
+}));
 
 function BuiltByDevelopers() {
+  const classes = useStyles();
   return (
     <MKBox
       display="flex"
@@ -27,26 +46,28 @@ function BuiltByDevelopers() {
       }}
     >
       <Container>
-        <Grid container item xs={12} lg={6} sx={{ ml: { xs: 0, lg: 6 } }}>
-          <MKTypography variant="h1" color="white" mb={2}>
+        <Box className={classes.proposition}>
+          <Box component="h1" variant="h1" color="white" mb={2}>
             Value Proposition
-          </MKTypography>
-          <MKTypography variant="body1" color="white" opacity={1} mb={2}>
+          </Box>
+          <Box component="p" variant="body1" opacity={1} mb={2} textAlign="justify">
             One of the tasking responsibilities of businesses in this digital age is transcending
             the noise and communicating their brand essence in a way that captures consumer
             attention and converts those attention into desirable actions for the business.
+            <br />
             <br />A recent study by Microsoft Corp reveals that the average attention span of a
             human is about 8 seconds and several brands are already competing for this time. What
             makes you stand out each time is a compelling brand message that prospects can identify
             with, a huge part of why storytelling matters. <br />
+            <br />
             There is no stronger connection between humans than storytelling. People want to
             interact with brands that see them, understand their needs and reflect their values – No
             better way to compel action and drive behavior than infusing storytelling into your
             digital marketing campaigns.
-          </MKTypography>
-          <MKTypography
+          </Box>
+          {/* <MKTypography
             component="a"
-            href="https://www.creative-tim.com/learning-lab/react/overview/material-kit/"
+            href="https://rhodetails.com/"
             target="_blank"
             rel="noreferrer"
             variant="body2"
@@ -68,8 +89,9 @@ function BuiltByDevelopers() {
             }}
           >
             Read more <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
-          </MKTypography>
-        </Grid>
+          </MKTypography> */}
+        </Box>
+        {/* </Grid> */}
       </Container>
     </MKBox>
   );

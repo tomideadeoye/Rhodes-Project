@@ -15,7 +15,7 @@ View all components here. (https://www.creative-tim.com/learning-lab/react/alert
 
 _Documentation built by Developers_
 Each element is well presented in very complex documentation.
-You can read more about the documentation here (https://www.creative-tim.com/learning-lab/react/overview/material-kit/).
+You can read more about the documentation here (https://rhodetails.com/).
 
 _Example Pages_
 If you want to get inspiration or just show something directly to your clients, you can jump-start your development with our pre-built example pages. You will be able to quickly set up the basic structure for your web project.
@@ -85,7 +85,7 @@ Quick start options:
 
 ## Documentation
 
-The documentation for the Material Dashboard is hosted at our [website](https://www.creative-tim.com/learning-lab/react/overview/material-kit/?ref=readme-mkr).
+The documentation for the Material Dashboard is hosted at our [website](https://rhodetails.com/?ref=readme-mkr).
 
 ### What's included
 
@@ -162,7 +162,7 @@ At present, we officially aim to support the last two versions of the following 
 
 - [Live Preview](https://demos.creative-tim.com/material-kit-react/#/?ref=readme-mkr)
 - [Buy Page](https://rhodetails.com/?ref=readme-mkr)
-- Documentation is [here](https://www.creative-tim.com/learning-lab/react/overview/material-kit/?ref=readme-mkr)
+- Documentation is [here](https://rhodetails.com/?ref=readme-mkr)
 - [License Agreement](https://www.creative-tim.com/license?ref=readme-mkr)
 - [Support](https://www.creative-tim.com/contact-us?ref=readme-mkr)
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/ct-material-kit-react/issues)

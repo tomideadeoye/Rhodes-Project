@@ -22,7 +22,7 @@ import routes from "routes";
 
 // Images
 import bgImage from "assets/images/bg-about-us.jpg";
-import Footer from "pages/Presentation/sections/Footer";
+import Footer from "pages/Presentation/Footer";
 import DashMarketPlace from "./sections/DashMarketPlace";
 
 function AboutUs() {
@@ -113,7 +113,6 @@ function AboutUs() {
       >
         <DashMarketPlace />
         {/* <Information /> */}
-        {/* <Team /> */}
         {/* <Featuring /> */}
         <Newsletter />
       </Card>

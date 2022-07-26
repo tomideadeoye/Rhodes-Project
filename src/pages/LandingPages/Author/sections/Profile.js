@@ -19,7 +19,7 @@ function Profile() {
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
       <Container>
         <Grid container item xs={12} justifyContent="center" mx="auto">
-          <MKBox mt={{ xs: -16, md: -20 }} textAlign="center">
+          <MKBox mt={-21} textAlign="center">
             <MKAvatar src={profilePicture} alt="Burce Mars" size="xxl" shadow="xl" />
           </MKBox>
           <Grid container justifyContent="center" py={6}>
@@ -101,7 +101,8 @@ function Profile() {
                   +2348139207076 <br />
                   <MKTypography
                     component="a"
-                    href="#"
+                    href="https://rhodetails.com"
+                    target="_blank"
                     variant="body1"
                     fontWeight="light"
                     color="info"
@@ -121,7 +122,7 @@ function Profile() {
                       },
                     }}
                   >
-                    Visit my blog{" "}
+                    Visit my blog
                     <Icon sx={{ fontWeight: "bold", marginRight: "1rem" }}>arrow_forward</Icon>
                   </MKTypography>
                 </MKTypography>
