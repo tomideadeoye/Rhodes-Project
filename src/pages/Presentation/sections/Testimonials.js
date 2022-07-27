@@ -11,13 +11,27 @@ import MKTypography from "components/MKTypography";
 // Material Kit 2 React examples
 import DefaultReviewCard from "examples/Cards/ReviewCards/DefaultReviewCard";
 import { Box, Chip } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
 const skills = ["Presentation", " Content Strategy ", "Content Creation", "Public Speaking"];
 const interests = ["Conversations", "Social Media", "Networking", "Touring"];
+const useStyles = makeStyles(() => ({
+  skillsBox: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: "1rem",
 
+    "& > *": {
+      margin: "1vw",
+    },
+  },
+}));
 function Information() {
+  const classes = useStyles();
   return (
-    <MKBox component="section" py={12} mt="-10rem">
+    <MKBox component="section" py={12} mt="1rem">
       <Container>
         <Grid
           container
@@ -64,15 +78,7 @@ function Information() {
             Skills & Interests
           </MKTypography>
         </Grid>
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignItems: "center",
-            marginBottom: "1rem",
-          }}
-        >
+        <Box className={classes.skillsBox}>
           {skills.map((skill, index) => (
             <Chip key={index} label={skill} variant="outlined" />
           ))}

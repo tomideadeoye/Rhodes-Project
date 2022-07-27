@@ -54,7 +54,7 @@ function Hero({ data }) {
             </MKTypography>
             <Stack direction="row" spacing={1} mt={3}>
               <a href={data.mail} target="_blank" rel="noopener noreferrer">
-                <MKButton color="white">E-mail</MKButton>
+                <MKButton color="white">Mail</MKButton>
               </a>
               <a href={data.phone} target="_blank" rel="noopener noreferrer">
                 <MKButton variant="text" color="white">

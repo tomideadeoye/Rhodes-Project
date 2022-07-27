@@ -6,6 +6,10 @@ import Box from "@mui/material/Box";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    padding: "3rem 3rem",
+  },
+
   proposition: {
     paddingBottom: "2rem",
     color: "white",
@@ -30,6 +34,7 @@ function BuiltByDevelopers() {
   const classes = useStyles();
   return (
     <MKBox
+      className={classes.container}
       display="flex"
       alignItems="center"
       borderRadius="xl"

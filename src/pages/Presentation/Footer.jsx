@@ -30,6 +30,22 @@ const footerNav = [
   },
 ];
 
+const content = {
+  receiveMoney: {
+    receiveMoney:
+      "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam eaque ipsa,  quae ab illo inventore veritatis et quasi architecto beatae vitae  dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas    sit, aspernatur aut odit",
+  },
+  appStoreLink: {
+    link: "/xxxx",
+  },
+  googlePlayLink: {
+    link: "/sfdfhgjhkjnd",
+  },
+
+  noteToYoungLinkPaystack: "https://paystack.com/pay/rhodetails",
+  noteToYoungLinkEpok: "",
+};
+
 const useStyles = makeStyles((theme) => ({
   footerContainer: {
     color: "#fff",
@@ -207,19 +223,6 @@ export default function Footer() {
     <YouTubeIcon />,
   ];
 
-  const content = {
-    receiveMoney: {
-      receiveMoney:
-        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem  accusantium doloremque laudantium, totam rem aperiam eaque ipsa,  quae ab illo inventore veritatis et quasi architecto beatae vitae  dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas    sit, aspernatur aut odit",
-    },
-    appStoreLink: {
-      link: "/xxxx",
-    },
-    googlePlayLink: {
-      link: "/sfdfhgjhkjnd",
-    },
-  };
-
   const rowBoxStyling = {
     display: "flex",
     flexDirection: "row",
@@ -241,14 +244,14 @@ export default function Footer() {
           <img src="/images/whiterhodetails.png" alt="" className={classes.downloadLogo} />
         </Box>
         <Box sx={rowBoxStyling}>
-          <Link to={content.appStoreLink}>
+          <a href={content.noteToYoungLinkPaystack} target="_blank" rel="noopener noreferrer">
             <Box sx={colBoxStyling} className={classes.downloadIconBox}>
               <p>Download Book</p>
               <Box sx={rowBoxStyling} className={classes.storeDetails}>
                 <AutoStoriesIcon /> <p>Note to younger self</p>
               </Box>
             </Box>
-          </Link>
+          </a>
           {/* <Link to={content.googlePlayLink}>
             <Box sx={colBoxStyling} className={classes.downloadIconBox}>
               <p>Download from</p>
@@ -263,21 +266,19 @@ export default function Footer() {
       <Box className={classes.helpDocuments}>
         <img src="/images/whiterhodetails.png" alt="Rhodetails logo" />
         <Box className={classes.faqBox}>
-          <Box component="img" src="/vectors/helpdesk.svg" />
-          <p>Help documents and FAQ’S </p>
+          <Box sx={rowBoxStyling} className={classes.socialIconsBox}>
+            {iconsArray.map((item, index) => (
+              <Link key={index} to="/something" className={classes.socialIcons}>
+                {item}
+              </Link>
+            ))}
+          </Box>
         </Box>
       </Box>
 
       <Box className={classes.footerLineBreak} />
 
       <Box className={classes.socialAndFooter}>
-        <Box sx={rowBoxStyling} className={classes.socialIconsBox}>
-          {iconsArray.map((item, index) => (
-            <Link key={index} to="/something" className={classes.socialIcons}>
-              {item}
-            </Link>
-          ))}
-        </Box>
         <nav className={classes.footerNav}>
           {footerNav.map((item, index) => (
             <li key={index} id={item.id}>

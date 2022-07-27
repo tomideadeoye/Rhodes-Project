@@ -1,10 +1,6 @@
-// @mui material components
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-import MKSocialButton from "components/MKSocialButton";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 // import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 import Information from "pages/Presentation/sections/Information";
@@ -19,13 +15,14 @@ import routes from "routes";
 import bgImage from "assets/images/notes.png";
 import Hero from "./components/Hero";
 import Footer from "./Footer";
+import TweetShare from "./components/TweetShare";
 
 const data = {
   name: "Tobi Adeoye",
   tag: "Building a strong connection with your customers through storytelling.",
   coverImage: bgImage,
-  email: "tobiadeoye@gmail.com",
-  phone: "0803-890-890",
+  email: "mailto:tobiadeoye@gmail.com",
+  phone: "Tel: +234-813-920-7076",
 };
 
 function Presentation() {
@@ -54,13 +51,15 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
+        {" "}
+        <Author />
         <Information />
         <Container>
           <BuiltByDevelopers />
         </Container>
-        <Author />
         <Testimonials />
         <AuthorContact />
+        <TweetShare />
         {/* <Download /> <DesignBlocks /> <Pages /> <Counters />    <Team /> */}
         {/* <Container>
           <Grid container spacing={3}>
@@ -106,58 +105,6 @@ function Presentation() {
             </Grid>
           </Grid>
         </Container> */}
-        <MKBox pt={18} pb={6}>
-          <Container>
-            <Grid container spacing={3}>
-              <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
-                <MKTypography variant="h4" fontWeight="bold" mb={0.5}>
-                  Thank you for your support!
-                </MKTypography>
-                <MKTypography variant="body1" color="text">
-                  Let’s help you make fans out of your customers
-                </MKTypography>
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                lg={5}
-                my={{ xs: 5, lg: "auto" }}
-                mr={{ xs: 0, lg: "auto" }}
-                sx={{ textAlign: { xs: "center", lg: "right" } }}
-              >
-                <MKSocialButton
-                  component="a"
-                  href="https://twitter.com/intent/tweet?text=Check%20Material%20Design%20System%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23mui5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-kit-react"
-                  target="_blank"
-                  color="twitter"
-                  sx={{ mr: 1 }}
-                >
-                  <i className="fab fa-twitter" />
-                  &nbsp;Tweet
-                </MKSocialButton>
-                <MKSocialButton
-                  component="a"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https://rhodetails.com/"
-                  target="_blank"
-                  color="facebook"
-                  sx={{ mr: 1 }}
-                >
-                  <i className="fab fa-facebook" />
-                  &nbsp;Share
-                </MKSocialButton>
-                <MKSocialButton
-                  component="a"
-                  href="https://www.pinterest.com/pin/create/button/?url=https://rhodetails.com/"
-                  target="_blank"
-                  color="pinterest"
-                >
-                  <i className="fab fa-pinterest" />
-                  &nbsp;Pin it
-                </MKSocialButton>
-              </Grid>
-            </Grid>
-          </Container>
-        </MKBox>
       </Card>
       <MKBox pt={6} px={1} mt={9}>
         <Footer />

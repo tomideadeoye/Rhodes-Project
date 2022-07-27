@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 function Information() {
   const classes = useStyles();
   return (
-    <MKBox component="section" py={6} my={6}>
+    <MKBox component="section" py={1} my={1}>
       <Container>
         <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
           <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>

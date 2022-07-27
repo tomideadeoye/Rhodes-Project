@@ -131,7 +131,6 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="My name is"
                           placeholder="Full Name"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
@@ -140,8 +139,7 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="I'm looking for"
-                          placeholder="What you love"
+                          placeholder="Email"
                           InputLabelProps={{ shrink: true }}
                           fullWidth
                         />
@@ -149,7 +147,6 @@ function Contact() {
                       <Grid item xs={12} pr={1} mb={6}>
                         <MKInput
                           variant="standard"
-                          label="Your message"
                           placeholder="I want to say that..."
                           InputLabelProps={{ shrink: true }}
                           fullWidth
