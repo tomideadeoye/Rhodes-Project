@@ -2,7 +2,7 @@
 import Icon from "@mui/material/Icon";
 import RssFeedIcon from "@mui/icons-material/RssFeed";
 import AboutUs from "layouts/pages/landing-pages/about-us";
-import ContactUs from "layouts/pages/landing-pages/contact-us";
+// import ContactUs from "layouts/pages/landing-pages/contact-us";
 
 // import Navbars from "layouts/sections/navigation/navbars";
 // import Badges from "layouts/sections/elements/badges";
@@ -22,11 +22,11 @@ const routes = [
             route: "/proposition",
             component: <AboutUs />,
           },
-          {
-            name: "contact me",
-            route: "/contact-me",
-            component: <ContactUs />,
-          },
+          // {
+          //   name: "contact me",
+          //   route: "/contact-me",
+          //   component: <ContactUs />,
+          // },
         ],
       },
     ],
